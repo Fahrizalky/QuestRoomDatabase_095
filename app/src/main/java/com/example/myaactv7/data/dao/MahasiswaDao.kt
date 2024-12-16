@@ -25,10 +25,10 @@ interface MahasiswaDao {
     @Query("SELECT * FROM mahasiswa WHERE nim = :nim")
     fun getMahasiswa(nim: String) : Flow<Mahasiswa>
 
+    @Delete
+    suspend fun deleteMahasiswa(mahasiswa: Mahasiswa)
 
-
-
-
+    
 }
 
 
