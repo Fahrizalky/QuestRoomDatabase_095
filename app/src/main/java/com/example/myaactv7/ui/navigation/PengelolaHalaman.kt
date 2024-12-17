@@ -58,7 +58,7 @@ fun PengelolaHalaman(
             DestinasiDetail.routesWithArg,
             arguments = listOf(
                 navArgument(DestinasiDetail.NIM){
-                    type = NavType
+                    type = NavType.StringType
                 }
             )
         ){
