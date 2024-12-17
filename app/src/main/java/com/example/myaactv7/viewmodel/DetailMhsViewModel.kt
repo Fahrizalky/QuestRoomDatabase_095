@@ -188,6 +188,7 @@ fun BodyDetailMhs(
             }
         }
 
+
         detailUiState.isUiEventNotEmpty -> {
             Column (
                 modifier = modifier
