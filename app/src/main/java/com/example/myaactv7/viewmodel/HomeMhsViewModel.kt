@@ -149,7 +149,16 @@ fun BodyHomeMhsView(
             }
         }
 
-
+        homeUiState.isError -> {
+            //Menampilkan pesan error
+            LaunchedEffect(homeUiState.errorMessage) {
+                homeUiState.errorMessage?.let { message ->
+                    coroutineScope.launch {
+                        snackbarHostState.showSnackbar(message) //Tampilkan SnackBar
+                    }
+                }
+            }
+        }
 
 
         homeUiState.listMhs.isEmpty() -> {
