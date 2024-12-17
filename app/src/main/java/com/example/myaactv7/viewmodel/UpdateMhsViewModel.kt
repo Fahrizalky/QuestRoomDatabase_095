@@ -144,6 +144,7 @@ fun UpdateMhsView(
         modifier = modifier,
         snackbarHost = { SnackbarHost(hostState = snackbarHostState) }, //Tempatkan snackbar di scallfod
         topBar = {
+
             TopAppBar(
                 onBack = onBack,
                 showBackButton =  true,
@@ -164,13 +165,14 @@ fun UpdateMhsView(
                 onValueChange = { updateEvent ->
                     viewModel.updateState(updateEvent) //Update state di ViewModel
                 },
+
                 onClick = {
                     coroutineScope.launch {
                         if (viewModel.validateFields()) {
                             viewModel.updateData()
                             delay(600)
                             withContext(Dispatchers.Main){
-                                OnNavigation() //Navigasi di nain thread
+                                OnNavigation() //Navigasi di main thread
                             }
                         }
                     }
