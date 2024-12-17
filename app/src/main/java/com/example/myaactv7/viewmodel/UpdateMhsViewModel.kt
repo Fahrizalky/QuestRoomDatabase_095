@@ -23,6 +23,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.myaactv7.data.entity.Mahasiswa
 import com.example.myaactv7.data.repository.RepositoryMhs
 import com.example.myaactv7.ui.customWidget.TopAppBar
+import com.example.myaactv7.ui.navigation.DestinasiUpdate
 import com.example.myaactv7.ui.view.mahasiswa.InsertBodyMhs
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
@@ -39,7 +40,7 @@ class UpdateMhsViewModel (
     var updateUIState by mutableStateOf(MhsUIState())
         private  set
 
-    private  val  nim: String = checkNotNull(savedStateHandle[DestinasiEdit.NIM])
+    private  val  nim: String = checkNotNull(savedStateHandle[DestinasiUpdate.NIM])
 
 
     init {
