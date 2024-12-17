@@ -142,6 +142,7 @@ fun  DetailMhsView(
                 modifier = Modifier
             )
         },
+
         floatingActionButton = {
             FloatingActionButton(
                 onClick = {
