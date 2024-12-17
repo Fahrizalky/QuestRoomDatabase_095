@@ -124,6 +124,7 @@ fun  Mahasiswa.toDetailUiEvent() : MahasiswaEvent{
 
 }
 
+
 @Composable
 fun  DetailMhsView(
     modifier: Modifier = Modifier,
