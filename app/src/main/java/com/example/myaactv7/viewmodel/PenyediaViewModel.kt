@@ -14,12 +14,14 @@ object PenyediaViewModel{
                 krsApp().containerApp.repositoryMhs
             )
         }
+
         initializer {
             DetailMhsViewModel(
                 createSavedStateHandle(),
                 krsApp().containerApp.repositoryMhs,
             )
         }
+
         initializer {
             UpdateMhsViewModel(
                 createSavedStateHandle(),
@@ -28,6 +30,7 @@ object PenyediaViewModel{
         }
     }
 }
+
 
 fun CreationExtras.krsApp(): KrsApp =
     (this[ViewModelProvider.AndroidViewModelFactory.APPLICATION_KEY] as KrsApp)
